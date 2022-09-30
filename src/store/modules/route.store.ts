@@ -5,7 +5,7 @@ export const useRouteStore = defineStore({
 
   state: () => ({
     // 面包屑路由匹配
-    routeMatched: []
+    routeMatched: [] as any[]
   }),
 
   getters: {

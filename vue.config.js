@@ -40,8 +40,9 @@ module.exports = {
     resolve: {
       extensions: ['.ts'],
       alias: {
-        '@': resolve('src'),
-        'is': resolve('./src/utils/is.ts')
+        'is': resolve('./src/utils/is.ts'),
+        'api': resolve('src/apis'),
+        'validate': resolve('src/utils/validate.ts')
       }
     },
     plugins: [
@@ -71,7 +72,9 @@ module.exports = {
 
       new ProvidePlugin({
         $IS: 'is',
-        _: 'lodash'
+        _: 'lodash',
+        $API: 'api',
+        $VALIDATE: 'validate'
       })
     ]
   },

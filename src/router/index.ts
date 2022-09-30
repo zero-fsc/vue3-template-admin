@@ -5,11 +5,15 @@ const routes: Array<RouteRecordRaw> = [
     path: '/',
     name: 'home',
     component: () => import('@/layouts/index.vue'),
+    redirect: 'dashboard',
     children: [
       {
         path: '/dashboard',
         name: 'dashboard',
-        component: () => import('@/views/DashBoard/index.vue')
+        component: () => import('@/views/DashBoard/index.vue'),
+        meta: {
+          name: 'DashBoard'
+        }
       }
     ]
   }

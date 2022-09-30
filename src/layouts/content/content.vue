@@ -20,7 +20,6 @@ import BreadCrumb from '@/components/BreadCrumb/breadCrumb.vue'
   position: relative;
 
   .main-content {
-    background-color: #ffffff;
     width: 100%;
     height: calc(100% - 36px);
     border-radius: 5px;

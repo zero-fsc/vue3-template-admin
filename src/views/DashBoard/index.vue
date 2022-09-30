@@ -1,7 +1,10 @@
 <template>
   <div class="dashboard-container">
     <div class="dashboard-charts flex">
-      <div class="charts-1 flex-1"></div>
+
+      <div class="charts-1 flex-1">
+        <Icon icon="shouye" :style="{ color: 'red' }" />
+      </div>
       <div class="charts-1 flex-1"></div>
       <div class="charts-1 flex-1"></div>
       <div class="charts-1 flex-1"></div>
@@ -9,7 +12,9 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+  import Icon from '@/components/Icon/iconFont.vue'
+</script>
 
 <style lang="less" scoped>
 .charts-1 {

@@ -69,8 +69,10 @@ module.exports = {
     'vue/multi-word-component-names': 'off',
   },
   globals: {
-    $IS: true,
-    _: true,
-    $TEST: true
+    $IS: 'readonly',
+    _: 'readonly',
+    $TEST: 'readonly',
+    $API: 'readonly',
+    $VALIDATE: 'readonly'
   }
 }

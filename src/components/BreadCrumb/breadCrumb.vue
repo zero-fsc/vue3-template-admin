@@ -7,11 +7,20 @@
 </template>
 
 <script setup lang="ts">
-  import { useRouter } from 'vue-router';
-  const $router = useRouter()
-  onMounted(() => {
-    console.log($router.getRoutes());
-  })
+// import { useRouter } from 'vue-router';
+import { useRouteStore } from '@/store/modules/route.store';
+const routeStore = useRouteStore()
+// const $router = useRouter()
+onMounted(() => {
+  getMatchRouter()
+})
+
+/*
+* @description 获取router的match
+*/
+const getMatchRouter = () => {
+  console.log(routeStore.getRouteMatched);
+}
 </script>
 
 <style lang="less" scoped>
