@@ -1,28 +1,40 @@
 <template>
   <div class="dashboard-container">
-    <div class="dashboard-charts flex">
-
-      <div class="charts-1 flex-1">
-        <Icon icon="shouye" :style="{ color: 'red' }" />
+    <div class="dashboard-exhibition flex">
+      <div class="dashboard-exhibition-item">
+        <DailyDownload />
       </div>
-      <div class="charts-1 flex-1"></div>
-      <div class="charts-1 flex-1"></div>
-      <div class="charts-1 flex-1"></div>
+      <div class="dashboard-exhibition-item">
+        <DailyDownload />
+      </div>
+      <div class="dashboard-exhibition-item">
+        <DailyDownload />
+      </div>
+      <div class="dashboard-exhibition-item">
+        <DailyDownload />
+      </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-  import Icon from '@/components/Icon/iconFont.vue'
+import DailyDownload from './modules/dailyDownload.vue'
 </script>
 
 <style lang="less" scoped>
-.charts-1 {
-  height: 100px;
-  background-color: aquamarine;
-
-  &:nth-child(n + 2) {
-    margin-left: 10px;
+.dashboard-exhibition {
+  .dashboard-exhibition-item {
+    flex: 1;
+    height: 180px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 5px 5px 83px #cecece, -5px -5px 83px #ffffff;
+    &:nth-child(n + 1) {
+      margin-right: 20px;
+    }
+    &:last-child {
+      margin-right: 0px;
+    }
   }
 }
 </style>
